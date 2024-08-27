@@ -110,7 +110,7 @@ router.post('/login', async (req, res) => {
             res.cookie('token', token, { httpOnly: true, secure: process.env.NODE_ENV === 'production' });
             res.status(200) ;
             res.send("user login successfully");
-            res.redirect('/home');
+            //res.redirect('/home');
         } else {
             res.status(401).render('login', { error: 'Invalid login credentials' });
         }
