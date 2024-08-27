@@ -64,7 +64,8 @@ app.use('/', authRouter);
 
 // 404 Error Page
 app.use((req, res) => {
-  res.status(404).render('404');
+  // res.status(404).render('404');
+  res.status(200).render('404');
 });
 
 // Start the Server
