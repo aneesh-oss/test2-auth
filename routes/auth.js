@@ -31,7 +31,7 @@ router.post('/register', async (req, res) => {
         res.cookie('token', token, { httpOnly: true, secure: process.env.NODE_ENV === 'production' });
        // res.status(200).redirect('/home');
         res.status(200) ;
-        console.log("user regiester success");
+        res.send("user regiester success");
         
     } catch (err) {
         console.error('Error registering user:', err.message);
