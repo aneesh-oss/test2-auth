@@ -29,7 +29,10 @@ router.post('/register', async (req, res) => {
 
         // Store the token in a cookie
         res.cookie('token', token, { httpOnly: true, secure: process.env.NODE_ENV === 'production' });
-       res.status(200).redirect('/home');
+       // res.status(200).redirect('/home');
+        res.status(200) ;
+        console.log("user regiester success");
+        
     } catch (err) {
         console.error('Error registering user:', err.message);
         res.status(400).send('Error registering user');
